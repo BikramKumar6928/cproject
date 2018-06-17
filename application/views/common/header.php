@@ -15,9 +15,9 @@
 	<!-- STYLESHEET -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	<link rel="stylesheet" href="<?=site_url('assets/phasons/owl/docs.theme.min.css')?>">
-	<link rel="stylesheet" type="text/css" href="<?=site_url('assets/phasons/main.css')?>">
-	<link rel="stylesheet" type="text/css" href="<?=site_url('assets/phasons/account.css')?>">
+	<link rel="stylesheet" href="<?=base_url('assets/phasons/owl/docs.theme.min.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/phasons/main.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/phasons/account.css')?>">
 
 	<!--  Javascript-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -25,12 +25,12 @@
 
 
 	<!-- Owl Stylesheets -->
-	<link rel="stylesheet" href="<?=site_url('assets/phasons/owl/owl.carousel.min.css')?>">
+	<link rel="stylesheet" href="<?=base_url('assets/phasons/owl/owl.carousel.min.css')?>">
 	<!-- <link rel="stylesheet" href="assets/phasons/owl/owl.theme.default.min.css"> -->
 
 	<!-- owl js -->
-	<script src="<?=site_url('assets/phasons/owl/owl.carousel.js')?>"></script>
-	<script type="text/javascript" src="<?=site_url('assets/jquery/myjquery.js')?>"></script>
+	<script src="<?=base_url('assets/phasons/owl/owl.carousel.js')?>"></script>
+	<script type="text/javascript" src="<?=base_url('assets/jquery/myjquery.js')?>"></script>
 
 </head>
 
@@ -45,7 +45,7 @@
 						<span>Track order</span>
 					</l      i>
 					<li style="display: inline-block;padding-right: 7px">
-						<span>Bulk order</span>
+						<a href="<?=site_url('bulkOrder')?>">Bulk order</a>
 					</li>
 					<li style="display: inline-block;padding-right: 7px">
 						<span>Sell your art</span>
