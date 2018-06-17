@@ -246,14 +246,3 @@ footer ul li a{
 		margin-top: 10px;
 	}
 }
-
-/* ---------------------------------------------Details CSS--------------------------------- */
-
-@media (max-width:536px){
-  #pro-tile .row .row1 .column{
-    margin: 0;
-    margin-top: 15px;
-    padding-right: 5px;
-    border:1px solid black;
-  }
-}

@@ -17,6 +17,13 @@
 			$data['user'] = $this->data->getUser();
 			$data['title'] = $title;
 			$this->load->view('common/header',$data);
+			$this->load->view('common/login');
+			if(isset($_POST['login'])){
+				$this->data->handleLogin();
+			}
+			if(isset($_POST['signup'])){
+				$this->data->handleSignup();
+			}
 		}
 		public function drawFooter(){
 			$this->load->view('common/footer');
