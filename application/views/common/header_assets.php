@@ -49,6 +49,7 @@
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 			<link rel="stylesheet" href="<?=site_url('assets/phasons/owl/docs.theme.min.css')?>">
 			<link rel="stylesheet" type="text/css" href="<?=site_url('assets/phasons/main.css')?>">
+			<link rel="stylesheet" type="text/css" href="<?=site_url('assets/phasons/login.css')?>">
 	<?php
 	  if(!empty($css))
 	  {  
