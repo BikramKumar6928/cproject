@@ -91,7 +91,7 @@
 			if(is_null($user)){
 				?>
 
-				<li><a  href="login.php"><span class="glyphicon glyphicon-user">LOGIN</span></a></li>
+				<li><a type="button" data-toggle="modal" data-target="#loginModel"><span class="glyphicon glyphicon-user">LOGIN</span></a></li>
 
 			<? }
 			else{ ?>
