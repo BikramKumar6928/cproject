@@ -12,6 +12,9 @@
 					</div>
 				</div>
 				<div class="modal-body">
+					<div class="error">
+						<?=$this->session->flashdata('error')?>
+					</div>
 					<form id="loginform" method="POST" class="form-horizontal" role="form">
 
 						<!-- Add Error showing part here -->
@@ -30,18 +33,18 @@
 
 						<div class="input-group">
 							<div class="checkbox">
-								<span style="float: left; line-height: 15px;">Remember me</span> 
+								<span style="float: left; line-height: 15px;">Remember me</span>
 								<span style="float:right">
-									<input id="login-remember" class="form-control" type="checkbox" name="remember" value="1" style="height: 20px;"> 
+									<input id="login-remember" class="form-control" type="checkbox" name="remember" value="1" style="height: 20px;">
 								</span> <br>
-								<button id="btn-login" type="submit" name="login" class="btn btn-success">Login</button>
+								<button id="btn-login" type="submit" name="login" class="btn btn-success" >Login</button>
 							</div>
 						</div>
 						<hr>
 						<div style="margin-top:10px" class="form-group">
 							<!-- Button -->
 							<div class="col-sm-12 controls" style="margin:5px;">
-								
+
 								<a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>
 								<a id="btn-fblogin" href="#" class="btn btn-primary">Login with Google</a>
 							</div>
@@ -50,7 +53,7 @@
 				</div>
 				<div class="modal-footer">
 					<div class="form-group">
-						
+
 						<div>
 							Don't have an account!
 							<a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
@@ -113,7 +116,7 @@
 						<div style="margin-top:10px" class="form-group">
 							<!-- Button -->
 							<div class="col-sm-12 controls" style="margin:5px;">
-								
+
 								<a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>
 								<a id="btn-fblogin" href="#" class="btn btn-primary">Login with Google</a>
 							</div>
@@ -127,4 +130,3 @@
 		</div>
 	</div>
 </div>
-

@@ -16,11 +16,11 @@ class Data extends CI_Model {
 	public function getUser(){
 		$user_id = $this->session->userdata('id');
 		$pwd = $this->session->userdata('pwd');
-		if(!isset($uid)){
+		if(!isset($user_id)){
 			return;
 		}
-		$res = $this->db->where(['id'	=>	$uid,
-								 'pwd'	=>	$pwd])->get('users');
+		$res = $this->db->where(['id'	=>	$user_id,
+								 'password'	=>	$pwd])->get('users');
 		return $res->result_array()[0];
 	}
 
@@ -50,6 +50,8 @@ class Data extends CI_Model {
 		return $ret;
 
 	}
+
+	
 
 
 

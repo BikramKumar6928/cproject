@@ -9,13 +9,13 @@
 		 *@var strings
 		 *hold js file
 		 */
-		protected $js; 
+		protected $js;
 
 		/**
 		 *@var string
 		 *hold css file
 		 */
-		protected $css; 
+		protected $css;
 
 		function __construct($args = array()){
 			parent::__construct();
@@ -38,7 +38,7 @@
 
 		/**
 		 *
-		 * @param  $title   string     title of page  
+		 * @param  $title   string     title of page
 		 * loads the css, js file and header of page
 		 *
 		 */
@@ -51,10 +51,10 @@
 			// category for women section
 			$data['wCat'] = $this->data->getCat('W');
 
-			// fetching the no of item in cart 
+			// fetching the no of item in cart
 			$data['card_count'] = $this->session->userdata('cart') ? count($this->session->userdata('cart')) : 0;
 
-			// fetching the user detail 
+			// fetching the user detail
 			$data['user'] = $this->data->getUser();
 
 			// fetching css file
@@ -74,12 +74,6 @@
 			// load the nav bar of page
 			$this->load->view('common/header',$data);
 			$this->load->view('common/login');
-			if(isset($_POST['login'])){
-				$this->data->handleLogin();
-			}
-			if(isset($_POST['signup'])){
-				$this->data->handleSignup();
-			}
 		}
 
 
@@ -106,15 +100,15 @@
 		public function addJS($path,$prepend_base_url=true)
 		{
 			if($prepend_base_url)
-			{   
-				
+			{
+
 				$this->js[] = base_url().$path;
 			}
 			else
 			{
 				$this->js[] = $path;
 			}
-			
+
 		}
 
 		/**
@@ -127,8 +121,8 @@
 		public function addCSS($path,$prepend_base_url=true)
 		{
 			if($prepend_base_url)
-			{   
-				
+			{
+
 				$this->css[] = base_url().$path;
 			}
 			else

@@ -106,7 +106,7 @@
 						<li><hr style="margin: 0px;"></li>
 						<li><a href="account.php/<?=$user['id']?>">Account</a></li>
 						<li><hr style="margin: 0px;"></li>
-						<li><a href="test.php/<?=$user['id']?>/true">Logout</a></li>
+						<li><a onclick="logOut()">Logout</a></li>
 
 						<!-- first user_id, then flag true of logout -->
 

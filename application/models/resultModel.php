@@ -54,12 +54,15 @@ class ResultModel extends CI_Model {
 
 		return $ret;
 	}
-	public function getProducts($value=''){
-		$ret['var']=$this->db	->select('P.id,P.name,B.name as brand,C.name as category,P.image,P.price,P.discount as dis,((100-P.discount)/100)*P.price as tprice,')
+	public function getProducts($cond=''){
+		$this->db	->select('P.id,P.name,B.name as brand,C.name as category,P.image,P.price,P.discount as dis,((100-P.discount)/100)*P.price as tprice,')
 						->from('products as P')
 						->join('categories as C','C.id = P.cat_id')
-						->join('brands as B','B.id = P.brand_id')
-						->get()->result_array();
+						->join('brands as B','B.id = P.brand_id');
+		foreach ($cond as $key => $value) {
+			$this->db->where_in($key,$value);
+		}
+		$ret['var']=$this->db->get()->result_array();
 		foreach ($ret['var'] as &$key) {
 			$key['src'] = json_decode($key['image'])[0];
 		}
