@@ -87,7 +87,7 @@
 
 		<!-- owl js -->
 		<script src="<?=site_url('assets/phasons/owl/owl.carousel.js')?>"></script>
-		<script type="text/javascript" src="<?=site_url('assets/jquery/myjquery.js')?>"></script>
+		<script type="text/javascript" src="<?=site_url('assets/js/main.js')?>"></script>
 
 <?php
   if(!empty($js))
