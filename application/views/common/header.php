@@ -88,7 +88,7 @@
 			<!-- profile -->
 
 			<?
-			if(is_null($user)){
+			if(!$islogged){
 				?>
 
 				<li><a type="button" data-toggle="modal" data-target="#loginModel"><span class="glyphicon glyphicon-user">LOGIN</span></a></li>
@@ -96,17 +96,17 @@
 			<? }
 			else{ ?>
 				<li class="dropdown" style="margin-right: 15px; padding-top:0px;">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#"><img class="img img-responsive img-circle" src=<?=$user['profile_image']?> style="height:30px;width:auto" alt="hello"></a>
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#"><img class="img img-responsive img-circle" src=<?=$user->profile_image?> style="height:30px;width:auto" alt="hello"></a>
 					<ul class="dropdown-menu">
-						<li><center>HI <?=$user['fname']." ".$user['lname']?></center></li>
+						<li><center>HI <?=$user->fname." ".$user->lname?></center></li>
 						<li><hr style="margin: 0px;"></li>
 						<li><a href="#">Your Design</a></li>
 						<li><hr style="margin: 0px;"></li>
-						<li><a href="profile.php/<?=$user['id']?>">Profile</a></li>
+						<li><a href="profile.php/<?=$user->id?>">Profile</a></li>
 						<li><hr style="margin: 0px;"></li>
-						<li><a href="account.php/<?=$user['id']?>">Account</a></li>
+						<li><a href="account.php/<?=$user->id?>">Account</a></li>
 						<li><hr style="margin: 0px;"></li>
-						<li><a href="test.php/<?=$user['id']?>/true">Logout</a></li>
+						<li><a href="<?=base_url('index.php/login/logout')?>">Logout</a></li>
 
 						<!-- first user_id, then flag true of logout -->
 

@@ -5,6 +5,7 @@
 	**/
 	class MY_Controller extends CI_Controller {
 
+		var $CI;
 		/**
 		 *@var strings
 		 *hold js file
@@ -12,14 +13,24 @@
 		protected $js; 
 
 		/**
+		 *
+		 * @var islogged 
+		 */
+
+		protected $islogged;
+		/*
 		 *@var string
 		 *hold css file
 		 */
 		protected $css; 
 
-		function __construct($args = array()){
+		function __construct($args = array())
+		{
+
 			parent::__construct();
 
+
+			$this->CI =& get_instance();
 		    // defined and initialize  js to be type of array
 			$this->js = array();
 
@@ -31,7 +42,16 @@
 			$this->load->helper(array('url','html'));
 
 			// load the model to fetch data for header
-			$this->load->model('data');
+			$this->load->model('data');	
+			if($this->CI->authorization->auth())
+			{
+				$this->islogged=true;
+			}
+			else
+			{
+				$this->islogged=false;
+
+			}
 		}
 
 
@@ -52,11 +72,12 @@
 			$data['wCat'] = $this->data->getCat('W');
 
 			// fetching the no of item in cart 
-			$data['card_count'] = $this->session->userdata('cart') ? count($this->session->userdata('cart')) : 0;
+			$data['card_count'] = $this->CI->session->userdata('cart') ? count($this->session->userdata('cart')) : 0;
 
 			// fetching the user detail 
-			$data['user'] = $this->data->getUser();
-
+			$data['user'] = $this->data->getUserById($this->CI->session->userdata('id'));
+			
+			//print_r($_SESSION);
 			// fetching css file
 			$head['css']=$this->css;
 
@@ -68,18 +89,17 @@
 			// title of page
 			$head['title']=$title;
 
+			$data['islogged']=$this->islogged;
 			// loading basic css and js file required for page
 			$this->load->view('common/header_assets',$head);
 
 			// load the nav bar of page
 			$this->load->view('common/header',$data);
+
+			// if not logged in
+			if(!$this->islogged)
 			$this->load->view('common/login');
-			if(isset($_POST['login'])){
-				$this->data->handleLogin();
-			}
-			if(isset($_POST['signup'])){
-				$this->data->handleSignup();
-			}
+			
 		}
 
 
