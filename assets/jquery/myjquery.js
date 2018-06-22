@@ -54,23 +54,23 @@ function display(evt, num) {
 	evt.currentTarget.className += " active";
 }
 
-function site_url(append = ""){
-	var segment='index.php'
-	var base = window.location.origin;
-	var str = window.location.href;
-	if(str.indexOf(segment)!=-1){
-		base += segment;
-	}
-	base += "/"+append;
-	return base
-}
+// function site_url(append = ""){
+// 	var segment='index.php'
+// 	var base = window.location.origin;
+// 	var str = window.location.href;
+// 	if(str.indexOf(segment)!=-1){
+// 		base += segment;
+// 	}
+// 	base += "/"+append;
+// 	return base
+// }
 
-function base_url(){
-	return window.location.origin;
-}
+// function base_url(){
+// 	return window.location.origin;
+// }
 
 function logIn(){
-	var url =site_url("ajax/Login");
+	var url =site_url("ajax/login/validate_user_signin");
 	$.ajax({
 		url:url,
 		type:"POST",

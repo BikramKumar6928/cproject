@@ -59,7 +59,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a  href="home.php">
-					<img src="assets/logo/phashons_logo.png" style="height:70px; width:auto; margin-bottom:5px;" />
+					<img src="<?=base_url('assets/logo/phashons_logo.png')?>" style="height:70px; width:auto; margin-bottom:5px;" />
 				</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar" style="margin-top:15px;">
