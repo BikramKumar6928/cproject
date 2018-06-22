@@ -62,6 +62,28 @@ class Data extends CI_Model {
 		}
 	}
 
+	function getUserById($id = '')
+	{
+
+
+		$query = $this->db->where(array('mobile'=>$id))->or_where(array('email'=>$id))->get('users');
+
+		if ($query->num_rows() === 1)
+		{
+
+			return $query->row();
+
+		}
+
+		else
+		{
+
+			return array();
+		}
+
+	}
+
+
 
 
 
