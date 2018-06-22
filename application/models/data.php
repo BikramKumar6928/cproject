@@ -51,7 +51,16 @@ class Data extends CI_Model {
 
 	}
 
-	
+	public function insertBulkOrder($data){
+		if($this->db->insert('bulkorders',$data)){
+			$this->session->set_flashdata('flashInfo','Order has been placed successfully');
+			redirect(site_url('bulkOrder'));
+		}
+		else{
+			$this->session->set_flashdata('flashWarning','Some error occured. Please try again after some time.');
+			redirect(site_url('bulkOrder'));
+		}
+	}
 
 
 

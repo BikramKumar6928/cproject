@@ -22,7 +22,7 @@
 				Item to be delivered:
 				<input class="form-control" type="text" name="item" value="" placeholder="Name">
 			</label>
-			<button type="button" class="form-control" name="submit">Place Order</button>
+			<button type="button" class="form-control" name="submit" value="place">Place Order</button>
 
 		</div>
 	</div>

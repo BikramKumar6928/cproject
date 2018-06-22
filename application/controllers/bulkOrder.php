@@ -9,14 +9,16 @@ class BulkOrder extends MY_Controller {
 		$this->drawHeader();
 		$this->load->view('bulkOrder');
 		$this->drawFooter();
-		$data=[
-			'name'		=>	$this->input->post('name'),
-			'address'	=>	$this->input->post('address'),
-			'units'	=>	$this->input->post('units'),
-			'date'	=>	$this->input->post('date'),
-			'item'	=>	$this->input->post('item'),
+		if($this->input->post('submit')){
+			$data=[
+				'name'		=>	$this->input->post('name'),
+				'address'	=>	$this->input->post('address'),
+				'quantity'	=>	$this->input->post('units'),
+				'date'	=>	$this->input->post('date'),
+				'product_id'	=>	$this->input->post('item'),
 
-		];
-		$this->data->insertBulkOrder();
+			];
+			// $this->data->insertBulkOrder($data);
+		}
 	}
 }
