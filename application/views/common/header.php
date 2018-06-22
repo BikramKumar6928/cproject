@@ -1,4 +1,38 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title><?=$title?></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- FONT -->
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+
+	<!-- STYLESHEET -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="<?=base_url('assets/phasons/owl/docs.theme.min.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/phasons/main.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/phasons/account.css')?>">
+
+	<!--  Javascript-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	<!-- Owl Stylesheets -->
+	<link rel="stylesheet" href="<?=base_url('assets/phasons/owl/owl.carousel.min.css')?>">
+	<!-- <link rel="stylesheet" href="assets/phasons/owl/owl.theme.default.min.css"> -->
+
+	<!-- owl js -->
+	<script src="<?=base_url('assets/phasons/owl/owl.carousel.js')?>"></script>
+	<script type="text/javascript" src="<?=base_url('assets/jquery/myjquery.js')?>"></script>
+
+</head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -11,7 +45,7 @@
 						<span>Track order</span>
 					</l      i>
 					<li style="display: inline-block;padding-right: 7px">
-						<span>Bulk order</span>
+						<a href="<?=site_url('bulkOrder')?>">Bulk order</a>
 					</li>
 					<li style="display: inline-block;padding-right: 7px">
 						<span>Sell your art</span>
